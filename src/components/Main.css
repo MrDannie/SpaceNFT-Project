@@ -1,0 +1,250 @@
+/* .App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&family=Bellefair&family=Lato:wght@300&display=swap");
+
+.content-body {
+  background: #0b0d17;
+  background-image: url("../assets/home/background-home-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+  color: #ffffff;
+  height: 100vh;
+  /* padding: 30px 20px; */
+  overflow: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.flex-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* .flex > * {
+  flex: 1;
+} */
+
+.container {
+  margin: 0 auto;
+  max-width: 100%;
+  width: 1400px;
+}
+
+/* nav .container {
+  margin-top: 20px;
+} */
+
+/* nav ul .icon-close {
+  display: none;
+} */
+
+/* HEADER STYLING */
+
+.header-content {
+  padding-top: 300px;
+}
+
+header .sub-heading {
+  font-family: "Barlow Condensed", sans-serif;
+  letter-spacing: 1px;
+  color: #d0d6f9;
+  line-height: 34px;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 4px;
+}
+
+header h1 {
+  font-family: "Bellefair";
+  font-size: 120px;
+  line-height: 172px;
+  color: #ffffff;
+  font-style: normal;
+  font-weight: 400;
+  margin: 0;
+}
+
+header .short-text {
+  font-family: "Bellefair", serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32px;
+  color: #d0d6f9;
+}
+
+header .mint {
+  display: flex;
+  flex-grow: 0.9;
+  flex-flow: row-reverse;
+}
+
+/* header button {
+  border-radius: 50%;
+  border: none;
+  padding: 80px 50px;
+  font-family: "Bellefair";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  letter-spacing: 7px;
+  color: #0b0d17;
+} */
+
+.header-flex > * {
+  flex: 1;
+}
+
+/* .mint button:hover {
+  background-color: #000000;
+  border-radius: 50%;
+  border: none;
+  padding: 110px 80px;
+  font-family: "Bellefair";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  letter-spacing: 7px;
+} */
+/* 
+header button a {
+  border-radius: 50%;
+  display: inline-block;
+  border: none;
+  padding: 80px 50px;
+  font-family: "Bellefair";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  letter-spacing: 7px;
+  color: #0b0d17;
+} */
+
+/* .rectangle {
+  position: absolute;
+  width: 30%;
+  height: 1px;
+  left: 18%;
+  top: 6%;
+  z-index: 1;
+  background: #ffffff;
+  mix-blend-mode: normal;
+  opacity: 0.25;
+} */
+
+@media (max-width: 768px) {
+  .content-body {
+    text-align: center;
+    padding: 0px 20px;
+    background-image: url("../assets/home/background-home-mobile.jpg");
+  }
+  .flex {
+    flex-direction: column;
+  }
+
+  header {
+    padding-top: 0px;
+  }
+
+  header h1 {
+    font-size: 80px;
+  }
+
+  div p.short-text {
+    margin-bottom: 200px;
+    font-size: 15px;
+    letter-spacing: 0px;
+  }
+
+  /* nav .hamburger.show .close {
+    display: block;
+  } */
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .content-body {
+    text-align: center;
+    padding: 0px 20px;
+    background-image: url("../assets/home/background-home-tablet.jpg");
+  }
+
+  .header-flex {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  header {
+    padding-top: 0px;
+  }
+
+  header .short-text {
+    font-size: 15px;
+    letter-spacing: 0px;
+    padding: 0px 70px;
+    margin-bottom: 200px;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .content-body {
+    padding: 0px 20px;
+    background-image: url("../assets/home/background-home-tablet.jpg");
+  }
+
+  header {
+    padding: 0px 100px;
+  }
+
+  header h1 {
+    font-size: 80px;
+  }
+
+  header .short-text {
+    font-size: 15px;
+    letter-spacing: 0px;
+    margin-bottom: 200px;
+  }
+}

@@ -1,0 +1,170 @@
+nav {
+  width: 100%;
+  height: 115px;
+  position: absolute;
+  /* padding: 30px 21px; */
+  left: 0px;
+  top: 0px;
+  z-index: 120;
+}
+
+.nav-container {
+  padding: 30px 0px 30px 120px;
+}
+
+nav .hamburger {
+  display: none;
+}
+nav img {
+  width: 30px;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu-items {
+  display: flex;
+  flex-direction: row;
+}
+nav li {
+  margin-left: 30px;
+}
+
+nav li a {
+  text-decoration: none;
+  text-transform: none;
+  color: #ffffff;
+  font-size: 18px;
+}
+
+nav ul {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(40.7742px);
+  margin: 0px;
+  padding: 25px 80px;
+  flex-grow: 0.4;
+  font-family: "Barlow Condensed", sans-serif;
+  letter-spacing: 4.725px;
+  font-size: 15px;
+}
+
+nav ul li a span #force {
+  font-weight: bold;
+}
+strong {
+  font-weight: bold;
+}
+
+/* MEDIA QUERIES - MOBILE   */
+@media (max-width: 768px) {
+  /* NAV STYLING  */
+  nav .flex {
+    flex-direction: row;
+  }
+
+  nav {
+    padding: 30px 40px;
+  }
+
+  .menu-items {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    top: 0;
+    right: 0;
+    z-index: 10;
+  }
+  nav ul {
+    display: none;
+  }
+
+  .nav-container {
+    padding: 30px 0px;
+  }
+
+  nav .hamburger {
+    background-color: transparent;
+    border: 0;
+    display: flex;
+    cursor: pointer;
+  }
+
+  nav .icon-close {
+    background-color: transparent;
+    border: 0;
+    display: flex;
+    justify-content: right;
+
+    cursor: pointer;
+    text-align: center;
+  }
+
+  nav ul li {
+    margin: 30px 0;
+    text-align: left;
+  }
+
+  nav ul {
+    padding: 55px 55px;
+  }
+
+  nav .hamburger .close {
+    display: none;
+  }
+
+  nav .hamburger.show .open {
+    display: none;
+  }
+
+  nav ul.show {
+    display: flex;
+    width: 350px;
+    height: 100vh;
+    position: absolute;
+    flex-direction: column;
+    top: 0;
+    right: 0;
+    z-index: 10;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  nav {
+    margin-bottom: 50px;
+  }
+
+  nav ul .icon-close {
+    display: none;
+  }
+
+  .nav-container {
+    padding: 0px 0px 0px 20px;
+  }
+
+  nav ul {
+    padding: 25px 0px;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  nav {
+    margin-bottom: 250px;
+  }
+
+  nav ul .icon-close {
+    display: none;
+  }
+}
+
+@media (min-width: 1281px) {
+  nav ul .icon-close {
+    display: none;
+  }
+}

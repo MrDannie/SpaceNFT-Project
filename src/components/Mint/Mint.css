@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&family=Bellefair&family=Lato:wght@300&display=swap");
+
+.mint-body {
+  background: #0b0d17;
+  background-image: url("../../assets/crew/background-crew-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+  color: #ffffff;
+  height: 100vh;
+  padding: 0px 20%;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+.mint-body p {
+  margin-bottom: 5rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: "Bellefair";
+  font-size: 120px;
+  line-height: 172px;
+  color: #ffffff;
+  font-style: normal;
+  font-weight: 400;
+  margin: 0;
+}
+
+.mint-body p {
+  font-family: "Bellefair", serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32px;
+  color: #d0d6f9;
+}
+
+/* MINT BUTTON  */
+
+.btn {
+  border: 1px solid #3498db;
+  background: none;
+  padding: 1px 20px;
+  font-size: 20px;
+  font-family: "Barlow Condensed", serif;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: 0.8s;
+  z-index: 120;
+}
+
+.mint-button {
+  color: #d0d6f9;
+}
+
+.mint-button:hover {
+  border: 1px solid #fff;
+
+  color: #fff;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background: #3498db;
+  z-index: -1;
+  transition: 0.8s;
+}
+
+.mint-button::before {
+  top: 0;
+  border-radius: 0 0 50% 50%;
+}
+
+.mint-button::before {
+  height: 180%;
+}
+
+.mint-button:hover::before {
+  height: 0%;
+}
