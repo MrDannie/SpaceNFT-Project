@@ -4,10 +4,10 @@ import {SpaceNFTBase} from "./SpaceNFTBase.sol";
 import "hardhat/console.sol";
 
 //All Errors for specific events.
-error Zukuverse__NOTPUBLIC();
-error Zukuverse__LOWFUNDS();
-error Zukuverse__MAXSUPPLYREACHED();
-error Zukuverse__OVERMAXMINT();
+error SpaceNFT__NOTPUBLIC();
+error SpaceNFT__LOWFUNDS();
+error SpaceNFT__MAXSUPPLYREACHED();
+error SpaceNFT__OVERMAXMINT();
 
 /**
  * @title Space NFT Smart Contract.
@@ -21,7 +21,7 @@ contract SpaceNFT is SpaceNFTBase {
      * @param sender refers to who minted
      * @param quantity refers to how many the sender minted
      */
-    event Zukuverse__Minted(address indexed sender, uint256 indexed quantity);
+    event SpaceNFT__Minted(address indexed sender, uint256 indexed quantity);
 
     /**
      * @notice publicSale is a bool that determines when public mint is active
@@ -82,10 +82,10 @@ contract SpaceNFT is SpaceNFTBase {
 
     function publicMint() external payable callerIsUser {
         uint256 _quantity = 1;
-        if (!publicSale) revert Zukuverse__NOTPUBLIC();
+        if (!publicSale) revert SpaceNFT__NOTPUBLIC();
         if (msg.value < spaceNFTMintconfig.publicPrice * _quantity)
-            revert Zukuverse__LOWFUNDS();
-        if (_quantity > 1) revert Zukuverse__OVERMAXMINT();
+            revert SpaceNFT__LOWFUNDS();
+        if (_quantity > 1) revert SpaceNFT__OVERMAXMINT();
         mint(_quantity);
     }
 
@@ -97,9 +97,9 @@ contract SpaceNFT is SpaceNFTBase {
      */
     function mint(uint256 _quantity) internal nonReentrant {
         // if (totalSupply() + _quantity > spaceNFTMintconfig.maxSupply)
-        //     revert Zukuverse__MAXSUPPLYREACHED();
+        //     revert SpaceNFT__MAXSUPPLYREACHED();
         _safeMint(msg.sender, _quantity);
-        emit Zukuverse__Minted(msg.sender, _quantity);
+        emit SpaceNFT__Minted(msg.sender, _quantity);
     }
 
     /**

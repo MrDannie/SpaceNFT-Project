@@ -9,13 +9,13 @@ import {ReentrancyGuard} from "@openzeppelin/contracts/security/ReentrancyGuard.
 /**
  * @notice this error will output if a function requires an admin
  */
-error ZukuverseBase__NOTADMIN();
+error SpaceNFTBase__NOTADMIN();
 
 /**
  * @title The base contract for the SpaceNFT contract
  * @author DannyLabs Team
  * @notice this contract contains the base functionalities for the NFT mint
- * @dev Marked as abstract as it is a branch of the Main Zukuverse Contract
+ * @dev Marked as abstract as it is a branch of the Main SpaceNFT Contract
  */
 
 abstract contract SpaceNFTBase is Ownable, ERC721A, ReentrancyGuard {
@@ -83,7 +83,7 @@ abstract contract SpaceNFTBase is Ownable, ERC721A, ReentrancyGuard {
      */
     modifier onlyAdmin() {
         if (!isAdmin[msg.sender] && msg.sender != owner())
-            revert ZukuverseBase__NOTADMIN();
+            revert SpaceNFTBase__NOTADMIN();
         _;
     }
 
