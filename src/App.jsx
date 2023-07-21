@@ -12,7 +12,7 @@ import { Route, Routes } from "react-router-dom";
 
 const App = () => {
   useEffect(async () => {
-    await isWalletConnected().then(() => console.log("Blockchain Loaded"));
+    // await isWalletConnected().then(() => console.log("Blockchain Loaded"));
   }, []);
 
   return (

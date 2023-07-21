@@ -39,7 +39,7 @@ const isWalletConnected = async () => {
     if (accounts.length) {
       setGlobalState("connectedAccount", accounts[0]);
     } else {
-      alert("Please connect wallet.");
+      alert("Please connect to MUMBAI Network.");
       console.log("No accounts found.");
     }
   } catch (error) {
